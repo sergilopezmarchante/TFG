@@ -10,7 +10,7 @@ class RealEstate extends Contract {
       {
         id: 'e43c551rff326f639489a21312rt1229io23e5aed',
         nombre: 'Thonglor X Condominium',
-        direccion: 'Thonglor, Bangkok Thailand',
+        direccion: 'LHospitalet de Llobregat, Barcelona',
         info: 'Condominium Acquisition',
         agenteId: 'rHfDz2hI2NopdQJFE2pm',
         propietarioId: 'gDNYulWWUFT6emR5f1Ff',
@@ -36,7 +36,7 @@ class RealEstate extends Contract {
       {
         id: '2d10da5b19c3ac9b4883b4f15cf21ae63ae66e5e',
         nombre: 'Thonglor J Condominium',
-        direccion: 'Thonglor, Bangkok Thailand',
+        direccion: 'LHospitalet de Llobregat, Barcelona',
         info: 'Condominium Acquisition',
         agenteId: 'rHfDz2hI2NopdQJFE2pm',
         propietarioId: 'XsMwwZmwvkl4f70a9nPe',
@@ -49,7 +49,7 @@ class RealEstate extends Contract {
       {
         id: 'bdd8000ab6768333f91f197f6835e02fd076a355',
         nombre: 'Thonglor U Condominium',
-        direccion: 'Thonglor, Bangkok Thailand',
+        direccion: 'LHospitalet de Llobregat, Barcelona',
         info: 'Condominium Acquisition',
         agenteId: 'rHfDz2hI2NopdQJFE2pm',
         propietarioId: 'lSiHZbun2P3snZxuFw2U',
@@ -61,7 +61,7 @@ class RealEstate extends Contract {
       },
       {
         id: '1e4095aff3b4fce2a9d9462eec6ec422ab155ab5',
-        nombre: 'Thonglor P Condominium',
+        nombre: 'LHospitalet de Llobregat, Barcelona',
         direccion: 'Thonglor, Bangkok Thailand',
         info: 'Condominium Acquisition',
         agenteId: 'rHfDz2hI2NopdQJFE2pm',
