@@ -130,19 +130,19 @@ class RealEstate extends Contract {
     return JSON.stringify(allResults);
   }
 
-  // async transferirPropiedad(ctx, propId) {
-  //   console.info('============= INICIO : Transferir propiedad ===========');
+  async transferirPropiedad(ctx, propId) {
+    console.info('============= INICIO : Transferir propiedad ===========');
 
-  //   const propAsBytes = await ctx.stub.getState(propId); // get the property from chaincode state
-  //   if (!propAsBytes || propAsBytes.length === 0) {
-  //     throw new Error(`${propId} does not exist`);
-  //   }
-  //   const property = JSON.parse(propAsBytes.toString());
-  //   property.transferredAt = new Date().toISOString();
+     const propAsBytes = await ctx.stub.getState(propId); // get the property from chaincode state
+     if (!propAsBytes || propAsBytes.length === 0) {
+       throw new Error(`${propId} does not exist`);
+     }
+     const property = JSON.parse(propAsBytes.toString());
+     property.transferredAt = new Date().toISOString();
 
-  //   await ctx.stub.putState(propId, Buffer.from(JSON.stringify(property)));
-  //   console.info('============= FINAL : Transferir propiedad ===========');
-  // }
+     await ctx.stub.putState(propId, Buffer.from(JSON.stringify(property)));
+     console.info('============= FINAL : Transferir propiedad ===========');
+  }
 }
 
 module.exports = RealEstate;
