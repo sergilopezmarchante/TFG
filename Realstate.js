@@ -5,7 +5,7 @@ const { Contract } = require('fabric-contract-api');
 
 class RealEstate extends Contract {
   async initLedger(ctx) {
-    console.info('============= INICIO : Inicializar ledger ===========');
+    console.info('============= INICIO : Iniciar ledger ===========');
     const properties = [
       {
         id: 'e43c551rff326f639489a21312rt1229io23e5aed',
@@ -78,7 +78,7 @@ class RealEstate extends Contract {
       await ctx.stub.putState(properties[i].id, Buffer.from(JSON.stringify(properties[i])));
       console.info('Añadida <--> ', properties[i]);
     }
-    console.info('============= FINAL : Inicializar Ledger ===========');
+    console.info('============= FINAL : Iniciar Ledger ===========');
   }
 
   async queryPropiedad(ctx, propNumber) {
@@ -91,7 +91,7 @@ class RealEstate extends Contract {
   }
 
   async crearPropiedad(ctx, id, nombre, direccion, info, agenteId, propietarioId, tipo, precio, orgId, fechacreacion, anteriorId) {
-    console.info('============= INICIO : Crear de propiedad ===========');
+    console.info('============= INICIO : Crear propiedad ===========');
     const data = {
       docType: 'property',
       id,
