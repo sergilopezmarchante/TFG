@@ -9,7 +9,7 @@ class RealEstate extends Contract {
     const properties = [
       {
         id: 'e43c551rff326f639489a21312rt1229io23e5aed',
-        nombre: 'Thonglor X Condominium',
+        nombre: 'Piso en Sant Josep',
         direccion: 'LHospitalet de Llobregat, Barcelona',
         info: 'Condominium Acquisition',
         agenteId: 'rHfDz2hI2NopdQJFE2pm',
@@ -22,7 +22,7 @@ class RealEstate extends Contract {
       },
       {
         id: '1c35984def6517b75c470769cfe41d37db8b405b',
-        nombre: 'Thonglor Y Condominium',
+        nombre: 'Piso en Can Serra',
         direccion: 'Thonglor, Bangkok Thailand',
         info: 'Condominium Acquisition',
         agenteId: 'rHfDz2hI2NopdQJFE2pm',
@@ -35,7 +35,7 @@ class RealEstate extends Contract {
       },
       {
         id: '2d10da5b19c3ac9b4883b4f15cf21ae63ae66e5e',
-        nombre: 'Thonglor J Condominium',
+        nombre: 'Piso en zona centro LH',
         direccion: 'LHospitalet de Llobregat, Barcelona',
         info: 'Condominium Acquisition',
         agenteId: 'rHfDz2hI2NopdQJFE2pm',
@@ -48,7 +48,7 @@ class RealEstate extends Contract {
       },
       {
         id: 'bdd8000ab6768333f91f197f6835e02fd076a355',
-        nombre: 'Thonglor U Condominium',
+        nombre: 'Piso en Bellvitge',
         direccion: 'LHospitalet de Llobregat, Barcelona',
         info: 'Condominium Acquisition',
         agenteId: 'rHfDz2hI2NopdQJFE2pm',
