@@ -133,7 +133,7 @@ class RealEstate extends Contract {
   async transferirPropiedad(ctx, propId) {
     console.info('============= INICIO : Transferir propiedad ===========');
 
-     const propAsBytes = await ctx.stub.getState(propId); // get the property from chaincode state
+     const propAsBytes = await ctx.stub.getState(propId); 
      if (!propAsBytes || propAsBytes.length === 0) {
        throw new Error(`${propId} does not exist`);
      }
