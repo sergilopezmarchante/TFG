@@ -7,27 +7,27 @@ const path = require('path');
 
 async function main() {
   try {
-    // load the network configuration
+    // Cargar la configuración de la red
     const ccpPath = path.resolve(__dirname, '..', '..', 'test-network', 'organizations', 'peerOrganizations', 'org1.example.com', 'connection-org1.json');
     const ccp = JSON.parse(fs.readFileSync(ccpPath, 'utf8'));
 
-    // Create a new CA client for interacting with the CA.
+    // Crear un nuevo cliente CA para interactuar con la CA.
     const caURL = ccp.certificateAuthorities['ca.org1.example.com'].url;
     const ca = new FabricCAServices(caURL);
 
-    // Create a new file system based wallet for managing identities.
+    //Crear un nuevo sistema de ficheros basado en una billetera para gestionar las identidades
     const walletPath = path.join(process.cwd(), 'wallet');
     const wallet = await Wallets.newFileSystemWallet(walletPath);
     console.log(`Wallet path: ${walletPath}`);
 
-    // Check to see if we've already enrolled the user.
+    // Revisar si el usuario ya está añadido
     const userIdentity = await wallet.get('appUser');
     if (userIdentity) {
       console.log('An identity for the user "appUser" already exists in the wallet');
       return;
     }
 
-    // Check to see if we've already enrolled the admin user.
+    // Revisar si el usuario administrador ya está añadido
     const adminIdentity = await wallet.get('admin');
     if (!adminIdentity) {
       console.log('An identity for the admin user "admin" does not exist in the wallet');
@@ -35,11 +35,11 @@ async function main() {
       return;
     }
 
-    // build a user object for authenticating with the CA
+    // Construir un objeto para llevar a cabo la autentificación con la CA
     const provider = wallet.getProviderRegistry().getProvider(adminIdentity.type);
     const adminUser = await provider.getUserContext(adminIdentity, 'admin');
 
-    // Register the user, enroll the user, and import the new identity into the wallet.
+    // Registrar el usuario, añadir el usuario e importar la nueva identidad en la billetera
     const secret = await ca.register(
       {
         affiliation: 'org1.department1',
