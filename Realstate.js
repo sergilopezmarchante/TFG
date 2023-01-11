@@ -91,7 +91,7 @@ class RealEstate extends Contract {
   }
 
   async crearPropiedad(ctx, id, nombre, direccion, info, agenteId, propietarioId, tipo, precio, orgId, fechacreacion, anteriorId) {
-    console.info('============= INICIO : Crear propiedad ===========');
+    console.info('============= INICIO : Crear de propiedad ===========');
     const data = {
       docType: 'property',
       id,
